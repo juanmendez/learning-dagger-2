@@ -10,10 +10,10 @@ import info.juanmendez.lean.dagger2.ui.MainView;
  */
 public class Application {
 
-    public static ServerComponent myComponent;
+    public static ServerComponent serverComponent;
 
     public static void main( String[] args ){
-        myComponent = DaggerServerComponent
+        serverComponent = DaggerServerComponent
                 .builder()
                 .serverModule(new ServerModule()).build();
 

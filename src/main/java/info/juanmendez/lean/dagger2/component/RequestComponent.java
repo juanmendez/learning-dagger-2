@@ -8,7 +8,5 @@ import info.juanmendez.lean.dagger2.ui.MainView;
  */
 @Subcomponent(modules = RequestModule.class)
 public interface RequestComponent {
-
-    RequestRouter providesRequestRouter();
     void inject( MainView mainView );
 }

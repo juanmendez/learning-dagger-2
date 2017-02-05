@@ -18,5 +18,5 @@ public interface ServerComponent {
     /**
      * make available to submodules
      */
-    RequestRouter providesRequestRouter();
+    Database providesDatabase();
 }

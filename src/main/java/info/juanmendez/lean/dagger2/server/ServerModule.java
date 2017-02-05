@@ -4,6 +4,8 @@ import dagger.Module;
 import dagger.Provides;
 import info.juanmendez.lean.dagger2.component.RequestRouter;
 
+import javax.inject.Singleton;
+
 /**
  * Created by musta on 2/4/2017.
  */
@@ -11,11 +13,11 @@ import info.juanmendez.lean.dagger2.component.RequestRouter;
 public class ServerModule {
 
     public ServerModule(){
-        System.out.print( "hello");
     }
 
+    @Singleton
     @Provides
-    public RequestRouter providesRequestRouter(){
-        return new RequestRouter();
+    public Database providesDatabase(){
+        return new Database();
     }
 }

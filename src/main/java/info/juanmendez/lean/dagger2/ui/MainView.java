@@ -4,6 +4,7 @@ import info.juanmendez.lean.dagger2.Application;
 import info.juanmendez.lean.dagger2.component.RequestComponent;
 import info.juanmendez.lean.dagger2.component.RequestModule;
 import info.juanmendez.lean.dagger2.component.RequestRouter;
+import info.juanmendez.lean.dagger2.server.Database;
 
 import javax.inject.Inject;
 
@@ -14,10 +15,15 @@ public class MainView {
     @Inject
     RequestRouter requestRouter;
 
+    @Inject
+    Database database;
+
     public MainView(){
-        RequestComponent requestComponent = Application.myComponent.newRequestModule( new RequestModule() );
+        RequestComponent requestComponent = Application.serverComponent.newRequestModule( new RequestModule() );
         requestComponent.inject( this );
 
-        System.out.println( requestRouter.request( "login") );
+        if( database.connect() ){
+            System.out.println( requestRouter.request( "login") );
+        }
     }
 }
