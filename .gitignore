@@ -78,7 +78,6 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
-*.gradle
 gradlew
 *.bat
 gradle/wrapper/gradle-wrapper.jar
