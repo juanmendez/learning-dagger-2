@@ -8,4 +8,5 @@ public class Database {
     public boolean connect(){
         return true;
     }
+    public String[] users = new String[]{"Mary", "John", "Peter", "Paul", "David", "Joseph", "Moses"};
 }

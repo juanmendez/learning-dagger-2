@@ -23,7 +23,8 @@ public class MainView {
         requestComponent.inject( this );
 
         if( database.connect() ){
-            System.out.println( requestRouter.request( "login") );
+            requestRouter.request( "login");
+            requestRouter.displayPage();
         }
     }
 }
