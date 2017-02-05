@@ -3,6 +3,7 @@ import info.juanmendez.lean.dagger2.component.RequestModule;
 import info.juanmendez.lean.dagger2.server.DaggerServerComponent;
 import info.juanmendez.lean.dagger2.server.ServerComponent;
 import info.juanmendez.lean.dagger2.server.ServerModule;
+import info.juanmendez.lean.dagger2.ui.MainView;
 
 /**
  * Created by musta on 2/4/2017.

@@ -1,7 +1,7 @@
 package info.juanmendez.lean.dagger2.server;
 
 import dagger.Component;
-import info.juanmendez.lean.dagger2.MainView;
+import info.juanmendez.lean.dagger2.ui.MainView;
 import info.juanmendez.lean.dagger2.component.RequestModule;
 
 import javax.inject.Singleton;

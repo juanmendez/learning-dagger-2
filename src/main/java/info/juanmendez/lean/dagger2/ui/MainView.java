@@ -1,4 +1,6 @@
-package info.juanmendez.lean.dagger2;
+package info.juanmendez.lean.dagger2.ui;
+
+import info.juanmendez.lean.dagger2.Application;
 
 import javax.inject.Inject;
 
