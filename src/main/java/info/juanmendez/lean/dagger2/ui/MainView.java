@@ -19,7 +19,8 @@ public class MainView {
     Database database;
 
     public MainView(){
-        RequestComponent requestComponent = Application.serverComponent.newRequestModule( new RequestModule() );
+
+        RequestComponent requestComponent = Application.serverComponent.requestBuilder().requestModule(new RequestModule()).build();
         requestComponent.inject( this );
 
         if( database.connect() ){
