@@ -1,8 +1,8 @@
 package info.juanmendez.lean.dagger2.server;
 
 import dagger.Component;
-import info.juanmendez.lean.dagger2.component.RequestRouter;
-import info.juanmendez.lean.dagger2.ui.MainView;
+import info.juanmendez.lean.dagger2.component.RequestComponent;
+import info.juanmendez.lean.dagger2.component.RequestModule;
 
 import javax.inject.Singleton;
 
@@ -12,5 +12,5 @@ import javax.inject.Singleton;
 @Singleton
 @Component(modules = {ServerModule.class})
 public interface ServerComponent {
-    RequestRouter requestRouter();
+    RequestComponent newRequestModule(RequestModule requestModule);
 }
