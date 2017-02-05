@@ -5,10 +5,10 @@ package info.juanmendez.lean.dagger2;
  */
 public class Application {
 
-    public static MyComponent myComponent;
+    public static ServerComponent myComponent;
 
     public static void main( String[] args ){
-        myComponent = DaggerMyComponent.builder().myModuleA(new MyModuleA()).myModuleB(new MyModuleB() ).build();
+        myComponent = DaggerMyComponent.builder().myModuleA(new ServerModule()).myModuleB(new RequestModule() ).build();
         new MainView();
     }
 }
