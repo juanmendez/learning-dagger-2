@@ -14,7 +14,7 @@ public class RequestModule {
     }
 
     @Provides
-    public RequestRouter provideRequestRouter(Database database){
+    public RequestRouter provideRequestRouter( Database database){
         return new RequestRouter(database);
     }
 }

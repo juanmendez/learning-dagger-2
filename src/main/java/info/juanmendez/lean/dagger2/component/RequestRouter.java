@@ -3,6 +3,7 @@ package info.juanmendez.lean.dagger2.component;
 import info.juanmendez.lean.dagger2.server.Database;
 
 import javax.inject.Inject;
+import javax.inject.Provider;
 
 /**
  * Created by musta on 2/5/2017.
