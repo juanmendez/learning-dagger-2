@@ -12,12 +12,8 @@ public class MainView {
     Bar bar;
 
     @Inject
-    @MyQualifier
-    Bar qualifiedBar;
-
-    @Inject
     public MainView(){
         Application.myComponent.inject(this);
-        System.out.println( "size " + bar.getStrings().size() + ", " + qualifiedBar.strings.size() );
+        System.out.println( "size " + bar.getStrings().size());
     }
 }
