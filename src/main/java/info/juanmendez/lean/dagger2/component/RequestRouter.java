@@ -5,6 +5,7 @@ package info.juanmendez.lean.dagger2.component;
  */
 public class RequestRouter {
 
-   /* @Inject RequestRouter(
-            Provider<RequestComponent.Builder> requestComponentProvider) {}*/
+    public String request( String route ){
+        return "redirecting to http://www.yourpage/route/" + route;
+    }
 }
