@@ -1,12 +1,10 @@
 package info.juanmendez.lean.dagger2.server;
 
-        import dagger.Module;
-        import dagger.Provides;
-        import info.juanmendez.lean.dagger2.component.RequestComponent;
-        import info.juanmendez.lean.dagger2.component.RequestModule;
-        import info.juanmendez.lean.dagger2.component.RequestRouter;
+import dagger.Module;
+import dagger.Provides;
+import info.juanmendez.lean.dagger2.component.RequestComponent;
 
-        import javax.inject.Singleton;
+import javax.inject.Singleton;
 
 /**
  * Created by musta on 2/4/2017.
