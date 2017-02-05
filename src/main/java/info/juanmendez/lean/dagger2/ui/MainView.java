@@ -20,7 +20,7 @@ public class MainView {
 
     public MainView(){
 
-        RequestComponent requestComponent = Application.serverComponent.requestInjector().createComponent(new RequestModule());
+        RequestComponent requestComponent = Application.serverComponent.requestBuilder().requestModule(new RequestModule()).build();
         requestComponent.inject( this );
 
         if( database.connect() ){

@@ -3,16 +3,21 @@ package info.juanmendez.lean.dagger2.component;
 import info.juanmendez.lean.dagger2.server.Database;
 
 import javax.inject.Inject;
-import javax.inject.Provider;
+import javax.inject.Singleton;
 
 /**
  * Created by musta on 2/5/2017.
  */
+@Singleton
 public class RequestRouter {
+
+    @Inject
     Database database;
 
-    public RequestRouter( Database database ){
-        this.database = database;
+    @Inject
+    public RequestRouter(){
+        System.out.println( "@singleton avoids multiple instances");
+        System.out.println( "Otherwise ServerComponent and Subcomponent have their own instances");
     }
 
     public void request( String route ){

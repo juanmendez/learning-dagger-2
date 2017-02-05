@@ -12,9 +12,4 @@ public class RequestModule {
 
     public RequestModule(){
     }
-
-    @Provides
-    public RequestRouter provideRequestRouter( Database database){
-        return new RequestRouter(database);
-    }
 }

@@ -2,6 +2,7 @@ package info.juanmendez.lean.dagger2.server;
 
 import dagger.Component;
 import info.juanmendez.lean.dagger2.Application;
+import info.juanmendez.lean.dagger2.component.RequestComponent;
 
 import javax.inject.Singleton;
 
@@ -13,9 +14,9 @@ import javax.inject.Singleton;
 public interface ServerComponent {
 
     /**
-     * provide injectors to provide subcomponents
+     * Allow to reach subcomponent builder
      */
-    RequestInjector requestInjector();
+    RequestComponent.Builder requestBuilder();
 
     /**
      * make available to submodules
