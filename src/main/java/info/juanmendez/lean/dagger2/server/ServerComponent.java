@@ -11,10 +11,11 @@ import javax.inject.Singleton;
 @Singleton
 @Component(modules = {ServerModule.class})
 public interface ServerComponent {
-    RequestComponent.Builder requestBuilder();
+
 
     /**
      * make available to submodules
      */
+    RequestComponent.Builder requestBuilder();
     Database providesDatabase();
 }
