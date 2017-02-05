@@ -7,13 +7,8 @@ import javax.inject.Inject;
  */
 public class MainView {
 
-
-    @Inject
-    Bar bar;
-
     @Inject
     public MainView(){
         Application.myComponent.inject(this);
-        System.out.println( "size " + bar.getStrings().size());
     }
 }

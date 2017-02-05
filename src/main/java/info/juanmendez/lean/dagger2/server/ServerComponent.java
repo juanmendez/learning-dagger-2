@@ -1,9 +1,10 @@
-package info.juanmendez.lean.dagger2;
+package info.juanmendez.lean.dagger2.server;
 
 import dagger.Component;
+import info.juanmendez.lean.dagger2.MainView;
+import info.juanmendez.lean.dagger2.component.RequestModule;
 
 import javax.inject.Singleton;
-import java.util.Set;
 
 /**
  * Created by musta on 2/4/2017.
@@ -11,8 +12,6 @@ import java.util.Set;
 @Singleton
 @Component(modules = {ServerModule.class, RequestModule.class})
 public interface ServerComponent {
-
-    Set<String> strings();
 
     void inject( MainView mainView );
 }
