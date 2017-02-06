@@ -7,7 +7,7 @@ import info.juanmendez.lean.dagger2.component.RequestRouter;
 import javax.inject.Singleton;
 
 /**
- * Created by musta on 2/4/2017.
+ * Created by @juanmendezinfo on 2/4/2017.
  */
 @Module
 public class ServerModule {
