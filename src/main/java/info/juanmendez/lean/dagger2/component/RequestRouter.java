@@ -1,6 +1,7 @@
 package info.juanmendez.lean.dagger2.component;
 
-import info.juanmendez.lean.dagger2.Database;
+import info.juanmendez.lean.dagger2.Orm;
+import info.juanmendez.lean.dagger2.server.Database;
 
 import javax.inject.Inject;
 
@@ -10,7 +11,8 @@ import javax.inject.Inject;
 public class RequestRouter {
 
     @Inject
-    @ChildScope Database database;
+    @ChildScope
+    Orm orm;
 
     @Inject
     public RequestRouter(){
@@ -22,7 +24,7 @@ public class RequestRouter {
 
     public void displayPage(){
         System.out.println( "user@table");
-        for (String user:database.getUsers()) {
+        for (String user: orm.getTable(Database.Tables.USERS)) {
             System.out.println( user );
         }
     }

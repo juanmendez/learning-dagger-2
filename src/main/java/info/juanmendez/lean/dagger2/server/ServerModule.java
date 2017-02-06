@@ -2,7 +2,7 @@ package info.juanmendez.lean.dagger2.server;
 
 import dagger.Module;
 import dagger.Provides;
-import info.juanmendez.lean.dagger2.Database;
+import info.juanmendez.lean.dagger2.Orm;
 import info.juanmendez.lean.dagger2.component.RequestComponent;
 
 /**
@@ -16,16 +16,8 @@ public class ServerModule {
 
     @RootScope
     @Provides
-    public Database providesDatabase(){
-        return new Database() {
-            public boolean connect() {
-                return true;
-            }
-
-            public String[] getUsers() {
-                return new String[]{"Mary", "John", "Peter", "Paul", "David", "Joseph", "Moses"};
-            }
-        };
+    public Orm providesRootOrm(Database database){
+        return new RootOrm(database);
     }
 
     /**
@@ -34,14 +26,11 @@ public class ServerModule {
      * @return
      */
     @Provides
-    public Database providesServerDatabase(){
-        return new Database() {
-            public boolean connect() {
-                return false;
-            }
+    public Orm providesMockOrm(){
+        return new Orm() {
 
-            public String[] getUsers() {
-                return new String[]{};
+            public String[] getTable(String tableName) {
+                return new String[0];
             }
         };
     }
