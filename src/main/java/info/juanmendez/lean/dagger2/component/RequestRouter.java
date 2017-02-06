@@ -23,6 +23,9 @@ public class RequestRouter {
     }
 
     public void displayPage(){
-        System.out.println( "Users " + database.getUsers().length );
+        System.out.println( "user@table");
+        for (String user:database.getUsers()) {
+            System.out.println( user );
+        }
     }
 }
