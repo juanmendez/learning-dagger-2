@@ -27,7 +27,7 @@ public class Database {
     }
 
     public interface Tables{
-        public static final String USERS = "users";
-        public static final String ADMINS = "admins";
+        public static final String USERS = "user@table";
+        public static final String ADMINS = "admin@table";
     }
 }
