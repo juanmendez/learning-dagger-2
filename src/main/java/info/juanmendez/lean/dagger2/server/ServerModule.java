@@ -28,6 +28,11 @@ public class ServerModule {
         };
     }
 
+    /**
+     * There is an error if there is no binding without a qualifier.
+     * So I made this one out.
+     * @return
+     */
     @Provides
     public Database providesServerDatabase(){
         return new Database() {
