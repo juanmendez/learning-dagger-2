@@ -10,7 +10,7 @@ import info.juanmendez.lean.dagger2.server.RootScope;
 import javax.inject.Inject;
 
 /**
- * Created by musta on 2/4/2017.
+ * Created by @juanmendezinfo on 2/4/2017.
  */
 public class MainView {
     @Inject
