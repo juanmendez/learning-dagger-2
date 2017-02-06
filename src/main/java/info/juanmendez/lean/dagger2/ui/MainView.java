@@ -4,7 +4,7 @@ import info.juanmendez.lean.dagger2.Application;
 import info.juanmendez.lean.dagger2.component.RequestComponent;
 import info.juanmendez.lean.dagger2.component.RequestModule;
 import info.juanmendez.lean.dagger2.component.RequestRouter;
-import info.juanmendez.lean.dagger2.server.Database;
+import info.juanmendez.lean.dagger2.Database;
 
 import javax.inject.Inject;
 

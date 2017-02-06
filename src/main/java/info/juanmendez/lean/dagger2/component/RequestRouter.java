@@ -1,18 +1,16 @@
 package info.juanmendez.lean.dagger2.component;
 
-import info.juanmendez.lean.dagger2.server.Database;
+import info.juanmendez.lean.dagger2.Database;
 
 import javax.inject.Inject;
-import javax.inject.Singleton;
 
 /**
  * Created by musta on 2/5/2017.
  */
-@Singleton
 public class RequestRouter {
 
     @Inject
-    Database database;
+    @ChildScope Database database;
 
     @Inject
     public RequestRouter(){
@@ -25,6 +23,6 @@ public class RequestRouter {
     }
 
     public void displayPage(){
-        System.out.println( "Users " + database.users.length );
+        System.out.println( "Users " + database.getUsers().length );
     }
 }

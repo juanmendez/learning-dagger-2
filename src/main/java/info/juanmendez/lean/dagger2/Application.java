@@ -1,6 +1,5 @@
 package info.juanmendez.lean.dagger2;
 
-import info.juanmendez.lean.dagger2.component.RequestRouter;
 import info.juanmendez.lean.dagger2.server.DaggerServerComponent;
 import info.juanmendez.lean.dagger2.server.ServerComponent;
 import info.juanmendez.lean.dagger2.server.ServerModule;
@@ -24,12 +23,11 @@ public class Application {
         new MainView();
     }
 
-    @Inject
-    RequestRouter router;
+
 
     public Application(){
         serverComponent.inject(this);
 
-        router.displayPage();
+       // System.out.println( "how may users in database? " + database.getUsers().length );
     }
 }
