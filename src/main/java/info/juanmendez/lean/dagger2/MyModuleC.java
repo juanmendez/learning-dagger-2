@@ -5,7 +5,7 @@ import dagger.Provides;
 import dagger.multibindings.IntoSet;
 
 /**
- * Created by musta on 2/4/2017.
+ * Created by @juanmendezinfo on 2/4/2017.
  */
 @Module
 public class MyModuleC {

@@ -5,7 +5,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * Created by musta on 2/4/2017.
+ * Created by @juanmendezinfo on 2/4/2017.
  */
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)

@@ -6,7 +6,7 @@ import javax.inject.Singleton;
 import java.util.Set;
 
 /**
- * Created by musta on 2/4/2017.
+ * Created by @juanmendezinfo on 2/4/2017.
  */
 @Singleton
 @Component(modules = {MyModuleA.class, MyModuleB.class, MyModuleC.class, MyModuleD.class})
