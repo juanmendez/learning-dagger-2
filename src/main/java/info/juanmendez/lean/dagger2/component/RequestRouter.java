@@ -6,7 +6,7 @@ import javax.inject.Inject;
 import javax.inject.Provider;
 
 /**
- * Created by musta on 2/5/2017.
+ * Created by @juanmendezinfo on 2/5/2017.
  */
 public class RequestRouter {
     Database database;
@@ -20,6 +20,9 @@ public class RequestRouter {
     }
 
     public void displayPage(){
-        System.out.println( "Users " + database.users.length );
+        System.out.println( "user@table");
+        for (String user:database.users) {
+            System.out.println( user );
+        }
     }
 }

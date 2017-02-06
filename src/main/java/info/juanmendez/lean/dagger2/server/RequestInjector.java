@@ -7,7 +7,7 @@ import javax.inject.Inject;
 import javax.inject.Provider;
 
 /**
- * Created by musta on 2/5/2017.
+ * Created by @juanmendezinfo on 2/5/2017.
  */
 public class RequestInjector {
 

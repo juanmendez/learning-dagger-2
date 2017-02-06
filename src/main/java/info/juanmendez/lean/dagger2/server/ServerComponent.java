@@ -6,7 +6,7 @@ import info.juanmendez.lean.dagger2.Application;
 import javax.inject.Singleton;
 
 /**
- * Created by musta on 2/4/2017.
+ * Created by @juanmendezinfo on 2/4/2017.
  */
 @Singleton
 @Component(modules = {ServerModule.class})
