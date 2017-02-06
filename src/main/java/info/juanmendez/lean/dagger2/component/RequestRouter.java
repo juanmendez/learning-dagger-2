@@ -14,8 +14,6 @@ public class RequestRouter {
 
     @Inject
     public RequestRouter(){
-        System.out.println( "@singleton avoids multiple instances");
-        System.out.println( "Otherwise ServerComponent and Subcomponent have their own instances");
     }
 
     public void request( String route ){
