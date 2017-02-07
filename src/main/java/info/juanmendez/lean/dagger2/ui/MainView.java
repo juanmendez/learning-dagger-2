@@ -13,7 +13,7 @@ import java.util.Set;
  * Created by @juanmendezinfo on 2/4/2017.
  */
 public class MainView {
-
+    
     @Inject
     Set<String> letterString;
 
