@@ -2,36 +2,41 @@ package info.juanmendez.lean.dagger2.server;
 
 import dagger.Module;
 import dagger.Provides;
-import info.juanmendez.lean.dagger2.Orm;
+import dagger.multibindings.IntoMap;
+import dagger.multibindings.IntoSet;
+import dagger.multibindings.StringKey;
 import info.juanmendez.lean.dagger2.component.RequestComponent;
 
 /**
  * Created by @juanmendezinfo on 2/4/2017.
  */
-@Module(subcomponents = {RequestComponent.class})
+@Module
 public class ServerModule {
 
     public ServerModule(){
+        System.out.println( "server module created!");
     }
 
-    @RootScope
+
+
     @Provides
-    public Orm providesRootOrm(Database database){
-        return new RootOrm(database);
+    @IntoSet
+    static String a() {
+        return "a";
     }
 
-    /**
-     * There is an error if there is no binding without a qualifier.
-     * So I made this one out.
-     * @return
-     */
-    @Provides
-    public Orm providesMockOrm(){
-        return new Orm() {
 
-            public String[] getTable(String tableName) {
-                return new String[0];
-            }
-        };
+    @Provides
+    @IntoMap
+    @StringKey("one")
+    static int one() {
+        return 1;
+    }
+
+    @Provides
+    @IntoMap
+    @StringKey("two")
+    static int two() {
+        return 2;
     }
 }

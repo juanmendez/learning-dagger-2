@@ -2,10 +2,11 @@ package info.juanmendez.lean.dagger2.server;
 
 import dagger.Component;
 import info.juanmendez.lean.dagger2.Application;
-import info.juanmendez.lean.dagger2.Orm;
 import info.juanmendez.lean.dagger2.component.RequestComponent;
 
 import javax.inject.Singleton;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by @juanmendezinfo on 2/4/2017.
@@ -22,8 +23,8 @@ public interface ServerComponent {
     /**
      * make available to submodules
      */
-
-    Orm providesDatabase();
+    Set<String> set();
+    Map<String, Integer> map();
 
     /**
      * allow objects to inject

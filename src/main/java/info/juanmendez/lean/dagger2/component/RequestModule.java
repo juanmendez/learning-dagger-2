@@ -2,8 +2,14 @@ package info.juanmendez.lean.dagger2.component;
 
 import dagger.Module;
 import dagger.Provides;
-import info.juanmendez.lean.dagger2.Orm;
-import info.juanmendez.lean.dagger2.server.Database;
+import dagger.multibindings.ElementsIntoSet;
+import dagger.multibindings.IntoMap;
+import dagger.multibindings.IntoSet;
+import dagger.multibindings.StringKey;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by @juanmendezinfo on 2/4/2017.
@@ -14,9 +20,20 @@ public class RequestModule {
     public RequestModule(){
     }
 
-    @ChildScope
+    @Provides @IntoSet
+    public String c() {
+        return "c";
+    }
+
     @Provides
-    public Orm providesDatabase(Database database){
-        return new ChildOrm(database);
+    @IntoMap
+    @StringKey("three")
+    public int three() {
+        return 3;
+    }
+
+    @Provides @ElementsIntoSet
+    public Set<String> wxyz(){
+        return new HashSet<String>(Arrays.asList("W", "X", "Y", "Z"));
     }
 }

@@ -13,9 +13,13 @@ public class Application {
     public static ServerComponent serverComponent;
 
     public static void main( String[] args ){
-        serverComponent = DaggerServerComponent
-                .builder()
-                .serverModule(new ServerModule()).build();
+
+        /**
+         * previously after builder() I was including serverModule( new ServerModule())
+         * but that step is not required. Although I think is a good thing to have
+         * when passing arguments to the module.
+         */
+        serverComponent = DaggerServerComponent.builder().build();
 
         new MainView();
     }
