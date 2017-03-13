@@ -2,7 +2,6 @@ package info.juanmendez.lean.dagger2.server;
 
 import dagger.Module;
 import dagger.Provides;
-import info.juanmendez.lean.dagger2.component.RequestRouter;
 
 import javax.inject.Singleton;
 
