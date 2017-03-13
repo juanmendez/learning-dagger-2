@@ -1,4 +1,4 @@
-package info.juanmendez.lean.dagger2.component;
+package info.juanmendez.lean.dagger2.request;
 
 import javax.inject.Qualifier;
 import java.lang.annotation.Retention;
