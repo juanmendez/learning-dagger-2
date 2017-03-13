@@ -18,6 +18,6 @@ public class MainView {
     @Inject
     public MainView(){
         Application.myComponent.inject(this);
-        System.out.println( "size " + bar.getStrings().size() + ", " + qualifiedBar.strings.size() );
+        System.out.println( "There are " + bar.getStrings().size() + " element in Set<String>, and " + qualifiedBar.strings.size() + " of @MyQualifier.Set<String>" );
     }
 }
