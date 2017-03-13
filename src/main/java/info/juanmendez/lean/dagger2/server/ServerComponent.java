@@ -2,7 +2,7 @@ package info.juanmendez.lean.dagger2.server;
 
 import dagger.Component;
 import info.juanmendez.lean.dagger2.Application;
-import info.juanmendez.lean.dagger2.component.RequestComponent;
+import info.juanmendez.lean.dagger2.request.RequestComponent;
 
 import javax.inject.Singleton;
 import java.util.Map;

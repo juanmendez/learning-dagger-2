@@ -1,8 +1,8 @@
 package info.juanmendez.lean.dagger2.ui;
 
 import info.juanmendez.lean.dagger2.Application;
-import info.juanmendez.lean.dagger2.component.RequestComponent;
-import info.juanmendez.lean.dagger2.component.RequestModule;
+import info.juanmendez.lean.dagger2.request.RequestComponent;
+import info.juanmendez.lean.dagger2.request.RequestModule;
 
 import javax.inject.Inject;
 import java.util.Iterator;

@@ -5,7 +5,6 @@ import dagger.Provides;
 import dagger.multibindings.IntoMap;
 import dagger.multibindings.IntoSet;
 import dagger.multibindings.StringKey;
-import info.juanmendez.lean.dagger2.component.RequestComponent;
 
 /**
  * Created by @juanmendezinfo on 2/4/2017.
