@@ -11,6 +11,9 @@ import javax.inject.Inject;
 
 /**
  * Created by @juanmendezinfo on 2/7/2017.
+ *
+ * The cup instance has direct access to coffeeMachine. In this way way it can make the machine start up
+ * setting bean, filter, boil up the water, and finally pour.
  */
 public class Cup {
     @Inject
