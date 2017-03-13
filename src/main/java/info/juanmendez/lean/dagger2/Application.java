@@ -1,6 +1,6 @@
 package info.juanmendez.lean.dagger2;
 
-import info.juanmendez.lean.dagger2.component.RequestRouter;
+import info.juanmendez.lean.dagger2.request.RequestRouter;
 import info.juanmendez.lean.dagger2.server.DaggerServerComponent;
 import info.juanmendez.lean.dagger2.server.ServerComponent;
 import info.juanmendez.lean.dagger2.server.ServerModule;
