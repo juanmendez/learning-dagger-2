@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id "net.ltgt.apt" version "0.9"
+    id "net.ltgt.apt-idea" version "0.19"
 }
 
 version '1.0-SNAPSHOT'
@@ -14,14 +14,6 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
-    compile 'com.google.dagger:dagger:2.8'
-    apt 'com.google.dagger:dagger-compiler:2.8'
-}
-
-sourceSets {
-    main {
-        java {
-            srcDir "${buildDir.absolutePath}/generated/source/apt/main"
-        }
-    }
+    compile 'com.google.dagger:dagger:2.19'
+    apt 'com.google.dagger:dagger-compiler:2.19'
 }
