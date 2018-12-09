@@ -2,6 +2,7 @@ package info.juanmendez.lean.dagger2.server;
 
 import dagger.Module;
 import dagger.Provides;
+import info.juanmendez.lean.dagger2.server.database.Database;
 
 import javax.inject.Singleton;
 
@@ -11,12 +12,6 @@ import javax.inject.Singleton;
 @Module
 public class ServerModule {
 
-    public ServerModule(){
-    }
-
-    @Singleton
-    @Provides
-    public Database providesDatabase(){
-        return new Database();
+    public ServerModule() {
     }
 }

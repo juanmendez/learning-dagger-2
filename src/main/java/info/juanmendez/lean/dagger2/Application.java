@@ -3,6 +3,8 @@ package info.juanmendez.lean.dagger2;
 import info.juanmendez.lean.dagger2.server.DaggerServerComponent;
 import info.juanmendez.lean.dagger2.server.ServerComponent;
 import info.juanmendez.lean.dagger2.server.ServerModule;
+import info.juanmendez.lean.dagger2.server.database.DatabaseModule;
+import info.juanmendez.lean.dagger2.server.database.DatabaseType;
 import info.juanmendez.lean.dagger2.ui.MainView;
 
 /**
@@ -12,10 +14,12 @@ public class Application {
 
     public static ServerComponent serverComponent;
 
-    public static void main( String[] args ){
+    public static void main(String[] args) {
         serverComponent = DaggerServerComponent
                 .builder()
-                .serverModule(new ServerModule()).build();
+                .addServerModule(new ServerModule())
+                .addDatabaseModule(new DatabaseModule(new DatabaseType("MYSQL")))
+                .build();
 
         new MainView();
     }
