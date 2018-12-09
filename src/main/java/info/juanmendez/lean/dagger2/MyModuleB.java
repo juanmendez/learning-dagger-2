@@ -14,24 +14,24 @@ import java.util.Set;
 @Module
 public class MyModuleB {
 
-    public MyModuleB(){
+    public MyModuleB() {
 
     }
 
     @Provides
     @ElementsIntoSet
-    static Set<String> provideSomeStrings(){
+    static Set<String> provideSomeStrings() {
         return new HashSet<String>(Arrays.asList("DEF", "GHI"));
     }
 
     @Provides
-    public Bar providesBar(Set<String> strings){
+    public Bar providesBar(Set<String> strings) {
         return new Bar(strings);
     }
 
     @Provides
     @MyQualifier
-    public Bar providesQualifiedBar(@MyQualifier Set<String> strings ){
-        return  new Bar( strings );
+    public Bar providesQualifiedBar(@MyQualifier Set<String> strings) {
+        return new Bar(strings);
     }
 }

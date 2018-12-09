@@ -17,7 +17,7 @@ public class MyModuleD {
     @Provides
     @ElementsIntoSet
     @MyQualifier
-    static Set<String> provideSomeStrings(){
+    static Set<String> provideSomeStrings() {
         return new HashSet<String>(Arrays.asList("MNO", "PQR"));
     }
 }

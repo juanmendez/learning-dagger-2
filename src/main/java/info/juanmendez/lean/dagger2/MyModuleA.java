@@ -10,12 +10,13 @@ import dagger.multibindings.IntoSet;
 @Module
 public class MyModuleA {
 
-    public MyModuleA(){
+    public MyModuleA() {
 
     }
 
-    @Provides @IntoSet
-    static String provideOneString(){
+    @Provides
+    @IntoSet
+    static String provideOneString() {
         return "ABC";
     }
 }

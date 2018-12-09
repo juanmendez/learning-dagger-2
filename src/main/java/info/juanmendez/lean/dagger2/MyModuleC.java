@@ -13,7 +13,7 @@ public class MyModuleC {
     @Provides
     @IntoSet
     @MyQualifier
-    static String provideOne(){
+    static String provideOne() {
         return "JKL";
     }
 }

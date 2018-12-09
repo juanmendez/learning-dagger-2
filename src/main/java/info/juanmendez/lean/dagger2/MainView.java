@@ -16,8 +16,8 @@ public class MainView {
     Bar qualifiedBar;
 
     @Inject
-    public MainView(){
+    public MainView() {
         Application.myComponent.inject(this);
-        System.out.println( "There are " + bar.getStrings().size() + " element in Set<String>, and " + qualifiedBar.strings.size() + " of @MyQualifier.Set<String>" );
+        System.out.println("There are " + bar.getStrings().size() + " element in Set<String>, and " + qualifiedBar.strings.size() + " of @MyQualifier.Set<String>");
     }
 }
