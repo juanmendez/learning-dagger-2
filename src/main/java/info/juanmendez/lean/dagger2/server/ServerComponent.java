@@ -14,8 +14,11 @@ public interface ServerComponent {
 
 
     /**
-     * make available to submodules
+     * In this case ServerModule is declaring who is its subcomponent.
+     * ServerComponent is not aware of such inheritance. But in order
+     * to share dependencies indirectly with child module then they
+     * must be declared such as the case of providesDatabase
      */
-    RequestComponent.Builder requestBuilder();
-    Database providesDatabase();
+    RequestComponent.Builder requestComponent();
+    Database provideDatabase();
 }
