@@ -3,7 +3,7 @@ package info.juanmendez.lean.dagger2.server;
 import dagger.Module;
 import dagger.Provides;
 import info.juanmendez.lean.dagger2.Orm;
-import info.juanmendez.lean.dagger2.component.RequestComponent;
+import info.juanmendez.lean.dagger2.request.RequestComponent;
 
 /**
  * Created by @juanmendezinfo on 2/4/2017.
@@ -11,22 +11,17 @@ import info.juanmendez.lean.dagger2.component.RequestComponent;
 @Module(subcomponents = {RequestComponent.class})
 public class ServerModule {
 
-    public ServerModule(){
+    public ServerModule() {
     }
 
     @RootScope
     @Provides
-    public Orm providesRootOrm(Database database){
+    public Orm providesRootOrm(Database database) {
         return new RootOrm(database);
     }
 
-    /**
-     * There is an error if there is no binding without a qualifier.
-     * So I made this one out.
-     * @return
-     */
     @Provides
-    public Orm providesMockOrm(){
+    public Orm providesNonScopedOrm() {
         return new Orm() {
 
             public String[] getTable(String tableName) {

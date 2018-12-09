@@ -8,6 +8,8 @@ import javax.inject.Singleton;
  */
 @Singleton
 public class Database {
+    public static final String USERS = "user@table";
+    public static final String ADMINS = "admin@table";
 
     @Inject
     public Database(){
@@ -24,10 +26,5 @@ public class Database {
 
     public String[] getAdmins(){
         return new String[]{"John", "Mary"};
-    }
-
-    public interface Tables{
-        public static final String USERS = "user@table";
-        public static final String ADMINS = "admin@table";
     }
 }

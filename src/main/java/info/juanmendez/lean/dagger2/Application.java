@@ -2,7 +2,6 @@ package info.juanmendez.lean.dagger2;
 
 import info.juanmendez.lean.dagger2.server.DaggerServerComponent;
 import info.juanmendez.lean.dagger2.server.ServerComponent;
-import info.juanmendez.lean.dagger2.server.ServerModule;
 import info.juanmendez.lean.dagger2.ui.MainView;
 
 /**
@@ -15,7 +14,7 @@ public class Application {
     public static void main( String[] args ){
         serverComponent = DaggerServerComponent
                 .builder()
-                .serverModule(new ServerModule()).build();
+                .build();
 
         new MainView();
     }

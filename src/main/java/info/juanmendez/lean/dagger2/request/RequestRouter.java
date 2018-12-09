@@ -1,4 +1,4 @@
-package info.juanmendez.lean.dagger2.component;
+package info.juanmendez.lean.dagger2.request;
 
 import info.juanmendez.lean.dagger2.Orm;
 import info.juanmendez.lean.dagger2.server.Database;
@@ -24,7 +24,7 @@ public class RequestRouter {
 
     public void displayPage(){
         System.out.println( "user@table");
-        for (String user: orm.getTable(Database.Tables.USERS)) {
+        for (String user: orm.getTable(Database.USERS)) {
             System.out.println( user );
         }
     }
