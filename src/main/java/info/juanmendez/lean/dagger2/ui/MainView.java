@@ -5,6 +5,7 @@ import info.juanmendez.lean.dagger2.component.RequestComponent;
 import info.juanmendez.lean.dagger2.component.RequestModule;
 import info.juanmendez.lean.dagger2.component.RequestRouter;
 import info.juanmendez.lean.dagger2.server.Database;
+import info.juanmendez.lean.dagger2.server.RequestInjector;
 
 import javax.inject.Inject;
 
@@ -20,7 +21,8 @@ public class MainView {
 
     public MainView(){
 
-        RequestComponent requestComponent = Application.serverComponent.requestInjector().createComponent(new RequestModule());
+        RequestInjector injector = Application.serverComponent.requestInjector();
+        RequestComponent requestComponent = injector.createComponent(new RequestModule());
         requestComponent.inject( this );
 
         if( database.connect() ){

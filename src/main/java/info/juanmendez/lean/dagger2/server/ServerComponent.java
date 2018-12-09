@@ -25,5 +25,5 @@ public interface ServerComponent {
     /**
      * allow objects to inject
      */
-    void inject(Application application );
+    void inject(Application application);
 }

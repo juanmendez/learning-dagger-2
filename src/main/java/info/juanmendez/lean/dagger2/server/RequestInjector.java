@@ -11,20 +11,20 @@ import javax.inject.Provider;
  */
 public class RequestInjector {
 
-    Provider<RequestComponent.Builder>
-    provider;
+    Provider<RequestComponent.Builder> provider;
 
     /**
      * constructor must have an inject annotation in order
      * to be created and associated with its component
+     *
      * @param provider Injection of an encapsulated builder through get()
      */
     @Inject
-    public RequestInjector(Provider<RequestComponent.Builder> provider){
+    public RequestInjector(Provider<RequestComponent.Builder> provider) {
         this.provider = provider;
     }
 
-    public RequestComponent createComponent(RequestModule requestModule ){
+    public RequestComponent createComponent(RequestModule requestModule) {
         return provider.get().requestModule(requestModule).build();
     }
 }
