@@ -18,7 +18,8 @@ public class Application {
         serverComponent = DaggerServerComponent
                 .builder()
                 .addServerModule(new ServerModule())
-                .addDatabaseModule(new DatabaseModule(new DatabaseType("MYSQL")))
+                .addDatabaseModule(new DatabaseModule())
+                .setDatabaseType(new DatabaseType("bindsInstanceDataType"))
                 .build();
 
         new MainView();

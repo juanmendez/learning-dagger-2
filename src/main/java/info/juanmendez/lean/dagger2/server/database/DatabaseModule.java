@@ -7,15 +7,8 @@ import javax.inject.Singleton;
 
 @Module
 public class DatabaseModule {
-    DatabaseType databaseType;
 
-    public DatabaseModule(DatabaseType databaseType) {
-        this.databaseType = databaseType;
-    }
-
-    @Provides
-    DatabaseType provideDatabaseType() {
-        return databaseType;
+    public DatabaseModule() {
     }
 
     @Singleton

@@ -6,6 +6,7 @@ import info.juanmendez.lean.dagger2.request.RequestModule;
 import info.juanmendez.lean.dagger2.request.RequestRouter;
 import info.juanmendez.lean.dagger2.server.ServerComponent;
 import info.juanmendez.lean.dagger2.server.database.Database;
+import info.juanmendez.lean.dagger2.server.database.DatabaseType;
 
 import javax.inject.Inject;
 
@@ -19,6 +20,9 @@ public class MainView {
     @Inject
     Database database;
 
+    @Inject
+    DatabaseType databaseType;
+
     public MainView() {
         ServerComponent serverComponent = Application.serverComponent;
         RequestComponent requestComponent = serverComponent.newRequestModule(new RequestModule());
@@ -29,5 +33,7 @@ public class MainView {
             requestRouter.displayPage();
             requestRouter.displayDatabaseType();
         }
+
+        System.out.println( "database type " + databaseType.getDatabaseName());
     }
 }
