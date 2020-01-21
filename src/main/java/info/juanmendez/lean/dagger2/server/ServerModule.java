@@ -9,7 +9,7 @@ package info.juanmendez.lean.dagger2.server;
 /**
  * Created by @juanmendezinfo on 2/4/2017.
  */
-@Module(subcomponents = {RequestComponent.class})
+@Module
 public class ServerModule {
 
     public ServerModule(){
